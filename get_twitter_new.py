@@ -107,13 +107,7 @@ class StdOutListener(StreamListener):
 
         return sentiment, analysis.sentiment.polarity
 
-    def convert_sentiment_to_emoticon(self, sentiment_text):
-        if sentiment_text == 'positive':
-            return '✅'
-        elif sentiment_text == 'negative':
-            return '❌'
-        else:
-            return '🤷'
+    
 
 if __name__ == '__main__':
 

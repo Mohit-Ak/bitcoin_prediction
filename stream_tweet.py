@@ -31,7 +31,9 @@ def main():
         # get polarity
         polarity = get_polarity(tweets,f1)
         sentiment = np.mean(polarity)
-
+        print(".........")
+        print("tweet - \n",tweets)
+        print(".........")
         # save sentiment data to csv file
         f.write(str(sentiment))
         f.write(","+datetime.datetime.now().strftime("%y-%m-%d-%H-%M"))
@@ -51,5 +53,4 @@ def get_polarity(tweets,f):
         tweet_polarity.append(analysis.sentiment.polarity)
 
     return tweet_polarity
-
 main()
